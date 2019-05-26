@@ -1,1 +1,2 @@
-# SanaWindowsApplication
+# Sana Client Application
+windows platform
