@@ -8,3 +8,7 @@ G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Debug\Sana_Clinet
 G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Debug\Sana Clinet.csproj.GenerateResource.Cache
 G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Debug\Sana Clinet.exe
 G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Debug\Sana Clinet.pdb
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Debug\Sana Clinet.exe.manifest
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Debug\Sana Clinet.application
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Debug\Sana Clinet.exe.manifest
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Debug\Sana Clinet.application

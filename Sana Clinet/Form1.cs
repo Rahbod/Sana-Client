@@ -46,7 +46,7 @@ namespace Sana_Clinet
                 System.Windows.Forms.Application.Exit();
                 return true;
             }
-
+            
             if (keyData == (Keys.Control | Keys.Alt | Keys.M))
             {
                 this.WindowState = FormWindowState.Minimized;
