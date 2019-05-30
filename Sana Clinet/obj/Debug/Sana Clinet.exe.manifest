@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sana Clinet.exe" size="8704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sana Clinet.exe" size="14336">
       <assemblyIdentity name="Sana Clinet" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fFbWkr7uMyCACFWT6GEidRRj0jz2psPZ1VjrLos/ei8=</dsig:DigestValue>
+        <dsig:DigestValue>h5W1s4beFTOzh0Y2MbnSpRZMNkkWMxSc640HQpwf01A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

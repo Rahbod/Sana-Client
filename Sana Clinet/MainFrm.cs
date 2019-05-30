@@ -7,35 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.IO;
+using System.Net;
 
 namespace Sana_Clinet
 {
-    public partial class Form1 : Form
+    public partial class MainFrm : Form
     {
         private bool closing = false;
 
-        public Form1()
+        public MainFrm()
         {
             InitializeComponent();
-            InitConnections();
         }
 
         private void InitConnections()
         {
-            /*HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            Uri localAddress = new Uri("http://"+this.ReadConfig("LocalServer", "ip"));
+            String sohaAddress = this.ReadConfig("Soha", "host");
+            MessageBox.Show(localAddress.ToString());
+            
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(localAddress);
             request.Timeout = 15000;
             request.Method = "HEAD"; // As per Lasse's comment
             try
             {
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 {
-                    return response.StatusCode == HttpStatusCode.OK;
+                    webBrowser1.Navigate(localAddress.ToString());
                 }
             }
             catch (WebException)
             {
-                return false;
-            }*/
+                webBrowser1.Navigate(sohaAddress);
+            }
+            webBrowser1.Visible = true;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -46,7 +53,7 @@ namespace Sana_Clinet
                 System.Windows.Forms.Application.Exit();
                 return true;
             }
-            
+
             if (keyData == (Keys.Control | Keys.Alt | Keys.M))
             {
                 this.WindowState = FormWindowState.Minimized;
@@ -59,6 +66,28 @@ namespace Sana_Clinet
         {
             if (!this.closing)
                 e.Cancel = true;
+        }
+
+
+        public string ReadConfig(string section, string key)
+        {
+            string retVal = string.Empty;
+            string bankname = string.Empty;
+            string basePath = System.Environment.CurrentDirectory + "\\" + "Settings";
+            IniFile ini = new IniFile(basePath + "\\" + "config.ini");
+            if (!Directory.Exists(basePath))
+            {
+                SettingFrm settingFrm = new SettingFrm();
+                settingFrm.ShowDialog();
+            }
+
+            retVal = ini.IniReadValue(section, key);
+            return retVal;
+        }
+
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
+            InitConnections();
         }
 
     }
