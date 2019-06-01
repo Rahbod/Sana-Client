@@ -25,23 +25,22 @@ namespace Sana_Clinet
         private void InitConnections()
         {
             Uri localAddress = new Uri("http://"+this.ReadConfig("LocalServer", "ip"));
-            String sohaAddress = this.ReadConfig("Soha", "host");
-            MessageBox.Show(localAddress.ToString());
-            
+            String sohaAddress = this.ReadConfig("Soha", "host")+":"+this.ReadConfig("Soha", "port")+this.ReadConfig("Soha", "path");
+                      
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(localAddress);
             request.Timeout = 15000;
             request.Method = "HEAD"; // As per Lasse's comment
+            String address = sohaAddress;
             try
             {
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 {
-                    webBrowser1.Navigate(localAddress.ToString());
+                    address = "http://" + this.ReadConfig("LocalServer", "ip") + ":" + this.ReadConfig("LocalServer", "port") + this.ReadConfig("LocalServer", "path");
                 }
             }
-            catch (WebException)
-            {
-                webBrowser1.Navigate(sohaAddress);
-            }
+            catch (WebException){}
+            MessageBox.Show(address);
+            webBrowser1.Navigate(address);
             webBrowser1.Visible = true;
         }
 
@@ -73,7 +72,7 @@ namespace Sana_Clinet
         {
             string retVal = string.Empty;
             string bankname = string.Empty;
-            string basePath = System.Environment.CurrentDirectory + "\\" + "Settings";
+            string basePath = System.Environment.CurrentDirectory + "\\" + "settings";
             IniFile ini = new IniFile(basePath + "\\" + "config.ini");
             if (!Directory.Exists(basePath))
             {
