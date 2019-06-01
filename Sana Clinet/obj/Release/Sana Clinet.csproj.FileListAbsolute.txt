@@ -1,0 +1,13 @@
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Release\Sana Clinet.exe.config
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Release\Sana Clinet.exe.manifest
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Release\Sana Clinet.application
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Release\Sana Clinet.exe
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\bin\Release\Sana Clinet.pdb
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana_Clinet.MainFrm.resources
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana_Clinet.Properties.Resources.resources
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana_Clinet.SettingFrm.resources
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana Clinet.csproj.GenerateResource.Cache
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana Clinet.exe.manifest
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana Clinet.application
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana Clinet.exe
+G:\mobasheri\visualstudio\Projects\Sana Clinet\Sana Clinet\obj\Release\Sana Clinet.pdb
